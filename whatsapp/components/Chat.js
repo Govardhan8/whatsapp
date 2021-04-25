@@ -15,10 +15,10 @@ export default function Chat({ id, users, MenuHandler }) {
 	)
 	const recipient = recipientSnapshot?.docs?.[0]?.data()
 	const enterChat = () => {
-		router.push(`/chat/${id}`, MenuHandler())
+		router.push(`/chat/${id}`)
 	}
 	return (
-		<Container onClick={()=>{enterChat()}}>
+		<Container onClick={enterChat()}>
 			{recipient ? (
 				<UserAvatar src={recipient?.photoURL} />
 			) : (
