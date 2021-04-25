@@ -96,7 +96,8 @@ const Container = styled.div`
 	scrollbar-width: none;
 
 	@media screen and (max-width: 420px) {
-		display: ${(props) => (props.menu ? 'inline' : 'none')};
+		display: inline;
+		margin-left: ${(props) => (props.menu ? '-300px' : '0')};
 	}
 `
 const Header = styled.div`
