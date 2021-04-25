@@ -18,7 +18,7 @@ export default function Chat({ id, users, MenuHandler }) {
 		router.push(`/chat/${id}`, MenuHandler())
 	}
 	return (
-		<Container onClick={enterChat}>
+		<Container onClick={()=>{enterChat()}}>
 			{recipient ? (
 				<UserAvatar src={recipient?.photoURL} />
 			) : (
